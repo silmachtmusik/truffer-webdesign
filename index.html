@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderne Websites für Ihr Unternehmen, Projekt oder Idee | Truffer Webdesign Wallis</title>
+<meta name="description" content="Truffer Webdesign gestaltet moderne, persönliche Websites für Firmen im Oberwallis: neue Webseiten, Modernisierung bestehender Websites und Projekt-Websites für Wohnbau. Gratis Entwurf.">
+<link rel="canonical" href="https://www.truffer-webdesign.ch/">
+<meta property="og:title" content="Truffer Webdesign – moderne Websites für Firmen im Oberwallis">
+<meta property="og:description" content="Neue Firmen-Websites, Modernisierung und Projekt-Websites für Wohnbau. Gratis Entwurf, feste Ansprechperson.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.truffer-webdesign.ch/">
+<meta property="og:locale" content="de_CH">
+<meta name="theme-color" content="#1F2427">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F2427'/%3E%3Crect x='14' y='6' width='4' height='22' fill='%23E8E9E6'/%3E%3Crect x='14' y='6' width='4' height='4' fill='%2300663A'/%3E%3Crect x='14' y='14' width='4' height='4' fill='%2300663A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Truffer Webdesign",
+  "url": "https://www.truffer-webdesign.ch/",
+  "email": "info@truffer-webdesign.ch",
+  "description": "Moderne, persönliche Websites für Firmen im Oberwallis: neue Firmen-Websites, Modernisierung bestehender Websites und Projekt-Websites für Wohnbau.",
+  "areaServed": ["Oberwallis", "Brig-Glis", "Naters", "Visp", "St. Niklaus", "Zermatt", "Saas-Fee", "Leuk", "Raron", "Goms"],
+  "priceRange": "CHF 1500–3500",
+  "founder": {"@type": "Person", "name": "Silvan Truffer"},
+  "knowsLanguage": ["de", "fr"]
+}
+</script>
+<style>
+:root{
+  --beton:#E8E9E6;
+  --weiss:#FFFFFF;
+  --graphit:#1F2427;
+  --stahl:#5B6369;
+  --linie:#C8CBC7;
+  --signal:#00663A;
+  --signal-tief:#004D2B;
+  --signal-hell:#6CC497;
+  --rand:clamp(20px,4.5vw,56px);
+  --font:"Archivo", "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--beton);color:var(--graphit);
+  font-family:var(--font);font-size:1.0625rem;line-height:1.55;
+  font-variation-settings:"wdth" 100;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+figure{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--rand)}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-weight:640;letter-spacing:-.012em}
+.skip{position:absolute;left:-999px;top:8px;background:var(--graphit);color:var(--weiss);padding:10px 14px;z-index:20}
+.skip:focus{left:8px}
+
+/* Baugespann-Spitze: das wiederkehrende Motiv */
+.tip{background:repeating-linear-gradient(180deg,var(--signal) 0 6px,var(--weiss) 6px 12px)}
+
+/* Header */
+.top{position:sticky;top:0;z-index:10;background:rgba(232,233,230,.92);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--linie)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-pole{width:5px;height:30px;background:var(--graphit);position:relative}
+.brand-pole::before{content:"";position:absolute;inset:0 0 auto 0;height:12px;background:repeating-linear-gradient(180deg,var(--signal) 0 4px,var(--beton) 4px 6px)}
+.brand-name{font-size:1.25rem;line-height:1;font-weight:720;font-variation-settings:"wdth" 118;letter-spacing:-.01em}
+.brand-name span{font-weight:380;color:var(--stahl)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:.95rem;color:var(--graphit)}
+.nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:var(--signal)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:3px;
+  font:inherit;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;border:2px solid var(--graphit);transition:background .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--signal);border-color:var(--signal);color:var(--weiss)}
+.btn-primary:hover{background:var(--signal-tief);border-color:var(--signal-tief)}
+.btn-ghost{background:transparent;color:var(--graphit)}
+.btn-ghost:hover{background:var(--graphit);color:var(--beton)}
+.nav .btn{min-height:42px;padding:0 16px;font-size:.95rem}
+.nav a.btn-primary{color:var(--weiss)}
+
+/* Hero */
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(56px,8vw,110px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:end}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.9rem);line-height:1.04;font-weight:660;font-variation-settings:"wdth" 112;letter-spacing:-.022em;max-width:16ch;text-wrap:balance}
+.lead{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5;color:var(--graphit);max-width:34em;margin:28px 0 36px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{margin:22px 0 0;font-size:.95rem;color:var(--stahl)}
+
+.gespann{position:relative}
+.gespann svg{width:100%;height:auto}
+.gespann figcaption{display:flex;gap:14px;margin-top:18px;font-size:.92rem;line-height:1.45;color:var(--stahl);max-width:40em}
+.gespann figcaption b{color:var(--graphit);font-weight:620}
+.gespann figcaption::before{content:"";flex:0 0 5px;height:38px;margin-top:3px;background:repeating-linear-gradient(180deg,var(--signal) 0 6px,var(--beton) 6px 9px)}
+
+/* Animation: einmal beim Laden */
+.pole{transform-box:fill-box;transform-origin:50% 100%;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.pole.p2{animation-delay:.12s}.pole.p3{animation-delay:.24s}.pole.p4{animation-delay:.36s}.pole.p5{animation-delay:.48s}
+.profil{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s .75s ease-in-out forwards}
+.screen{opacity:0;animation:appear .7s 1.75s ease-out forwards}
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes appear{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .pole,.profil,.screen{animation:none;opacity:1;stroke-dashoffset:0;transform:none}
+}
+
+/* Sektionen */
+.sec{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--linie)}
+.sec-head{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px);margin-bottom:clamp(36px,5vw,64px)}
+.sec h2{font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.08;font-variation-settings:"wdth" 108}
+.sec-intro{font-size:1.15rem;color:var(--stahl);max-width:36em;margin:6px 0 0}
+
+/* Leistungen */
+.services{list-style:none;margin:0;padding:0;border-top:2px solid var(--graphit)}
+.service{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:clamp(20px,4vw,64px);padding:clamp(28px,3.5vw,44px) 0;border-bottom:1px solid var(--linie)}
+.service h3{font-size:1.5rem;line-height:1.15;font-variation-settings:"wdth" 106}
+.service p{margin:0;max-width:34em}
+.service ul{margin:0;padding:0;list-style:none;font-size:.95rem;color:var(--stahl)}
+.service li{padding:3px 0 3px 18px;position:relative}
+.service li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:2px;background:var(--signal)}
+.service .price-hint{display:block;margin-top:14px;font-weight:600;color:var(--graphit);font-size:.95rem}
+
+/* Referenzen */
+.refs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.ref figcaption{margin-top:20px}
+.ref h3{font-size:1.35rem;font-variation-settings:"wdth" 106}
+.ref .ort{color:var(--stahl);font-weight:400}
+.ref p{margin:8px 0 0;max-width:34em;color:var(--graphit)}
+.mock{background:var(--weiss);border:1.5px solid var(--graphit);border-radius:6px;overflow:hidden}
+.mock-bar{display:flex;align-items:center;gap:6px;height:34px;padding:0 12px;border-bottom:1px solid var(--linie)}
+.mock-bar i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--linie)}
+.mock-bar em{font-style:normal;font-size:.8rem;color:var(--stahl);margin-left:10px;background:var(--beton);padding:2px 12px;border-radius:20px}
+.mock-hero{position:relative;background:var(--graphit);color:var(--weiss);padding:34px 24px 0;height:170px;overflow:hidden}
+.mock-hero strong{display:block;font-size:clamp(1.05rem,1.8vw,1.4rem);font-weight:640;font-variation-settings:"wdth" 118;letter-spacing:-.01em;max-width:14ch;line-height:1.1;position:relative;z-index:1}
+.mock-hero svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:96px}
+.mock-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.mock-table th{font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--graphit)}
+.mock-table td{padding:9px 14px;border-bottom:1px solid var(--beton);color:var(--stahl)}
+.mock-table td:last-child,.mock-table th:last-child{text-align:right}
+.st{display:inline-flex;align-items:center;gap:6px;color:var(--graphit)}
+.st::before{content:"";width:8px;height:8px;border-radius:50%;border:1.5px solid var(--graphit)}
+.st.res::before{background:var(--signal);border-color:var(--signal)}
+
+/* Ablauf */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px);counter-reset:s}
+.step{counter-increment:s;border-top:2px solid var(--graphit);padding-top:20px}
+.step::before{content:counter(s);display:block;font-size:2.6rem;line-height:1;font-weight:300;font-variation-settings:"wdth" 80;color:var(--signal);margin-bottom:18px}
+.step h3{font-size:1.18rem;margin-bottom:8px;font-variation-settings:"wdth" 104}
+.step p{margin:0;font-size:.98rem;color:var(--stahl)}
+.mass{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:36px}
+.mass-line{grid-column:2 / 5;position:relative;height:28px;color:var(--stahl);font-size:.9rem;text-align:center}
+.mass-line::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--graphit)}
+.mass-line::after{content:"";position:absolute;inset:4px 0;border-left:1px solid var(--graphit);border-right:1px solid var(--graphit)}
+.mass-line span{position:relative;z-index:1;background:var(--beton);padding:0 12px;line-height:28px}
+
+/* Preise */
+.sheet{background:var(--weiss);border:1.5px solid var(--graphit);border-radius:4px}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.plan{position:relative;padding:clamp(26px,3vw,40px);display:flex;flex-direction:column}
+.plan + .plan{border-left:1px solid var(--linie)}
+.plan.focus::before{content:"";position:absolute;left:-1px;right:-1px;top:-1.5px;height:6px;background:repeating-linear-gradient(90deg,var(--signal) 0 18px,var(--weiss) 18px 26px)}
+.plan h3{font-size:1.3rem;font-variation-settings:"wdth" 106}
+.plan .for{margin:6px 0 22px;color:var(--stahl);font-size:.95rem;min-height:2.9em}
+.amount{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.amount small{font-size:.95rem;color:var(--stahl)}
+.amount b{font-size:clamp(2rem,3.3vw,2.7rem);font-weight:650;font-variation-settings:"wdth" 92;letter-spacing:-.02em;line-height:1}
+.amount-note{font-size:.9rem;color:var(--stahl);margin:0 0 22px;min-height:1.4em}
+.plan ul{list-style:none;margin:0 0 28px;padding:20px 0 0;border-top:1px solid var(--linie);font-size:.97rem;flex:1}
+.plan li{padding:5px 0 5px 26px;position:relative}
+.plan li::before{content:"";position:absolute;left:2px;top:.78em;width:10px;height:6px;border-left:2px solid var(--graphit);border-bottom:2px solid var(--graphit);transform:rotate(-45deg)}
+.plan .btn{width:100%}
+.care{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,56px);padding:clamp(24px,3vw,36px) clamp(26px,3vw,40px);border-top:1.5px solid var(--graphit);background:var(--graphit);color:var(--beton)}
+.care h3{font-size:1.3rem;font-variation-settings:"wdth" 106;color:var(--weiss)}
+.care .amount b{color:var(--weiss)}
+.care .amount small{color:#B9BEC1}
+.care p{margin:0;max-width:40em}
+.care p + p{margin-top:10px;color:#B9BEC1;font-size:.95rem}
+.extras{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,56px);margin-top:clamp(36px,4vw,52px)}
+.extras h3{font-size:1.15rem;font-variation-settings:"wdth" 104}
+.extras dl{margin:0;display:grid;grid-template-columns:1fr auto}
+.extras dt,.extras dd{margin:0;padding:12px 0;border-bottom:1px solid var(--linie)}
+.extras dd{text-align:right;font-weight:600;white-space:nowrap;padding-left:24px}
+.fine{margin:22px 0 0;font-size:.92rem;color:var(--stahl);max-width:50em}
+
+/* FAQ */
+.faq{border-top:2px solid var(--graphit)}
+.faq details{border-bottom:1px solid var(--linie)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-size:1.15rem;font-weight:600;font-variation-settings:"wdth" 104}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:0 0 14px;height:14px;background:linear-gradient(var(--graphit),var(--graphit)) center/14px 2px no-repeat,linear-gradient(var(--graphit),var(--graphit)) center/2px 14px no-repeat;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 24px;max-width:44em;color:var(--stahl)}
+@media (prefers-reduced-motion:reduce){.faq summary::after{transition:none}}
+
+/* Kontakt */
+.contact{background:var(--graphit);color:var(--beton);border-top:0}
+.contact h2{color:var(--weiss);max-width:16ch}
+.contact .sec-intro{color:#B9BEC1}
+.contact-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px)}
+.mail{display:inline-block;font-size:clamp(1.6rem,4.4vw,3.4rem);font-weight:600;font-variation-settings:"wdth" 100;letter-spacing:-.02em;line-height:1.1;color:var(--weiss);text-decoration:none;border-bottom:3px solid var(--signal);padding-bottom:4px;word-break:break-word}
+.mail:hover{border-bottom-color:var(--weiss)}
+.contact-meta{display:flex;flex-wrap:wrap;gap:16px 48px;margin-top:36px;font-size:1rem}
+.contact-meta div span{display:block;color:#B9BEC1;font-size:.9rem}
+.contact .btn-primary{margin-top:40px}
+
+/* Footer */
+.foot{background:var(--graphit);color:#B9BEC1;font-size:.9rem;padding:0 0 40px}
+.foot-inner{border-top:1px solid #3A4146;padding-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+.foot details{max-width:46em}
+.foot summary{cursor:pointer;color:var(--beton)}
+.foot details p{margin:12px 0 0}
+.legal{display:flex;flex-wrap:wrap;gap:24px}
+
+
+.service-ref{grid-column:2 / -1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:center;margin:8px 0 0}
+.service-ref h4{margin:6px 0 6px;font-size:1.15rem;font-weight:620;font-variation-settings:"wdth" 106}
+.service-ref p{color:var(--stahl);font-size:.97rem}
+.ref-label{font-size:.85rem;font-weight:600;color:var(--signal)}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;margin-top:32px}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:.9rem;color:#B9BEC1}
+.form input,.form textarea{font:inherit;font-size:1rem;color:var(--weiss);background:#2A3034;border:1px solid #4A5258;border-radius:3px;padding:12px 14px;resize:vertical}
+.form input::placeholder,.form textarea::placeholder{color:#7D858A}
+.form input:focus-visible,.form textarea:focus-visible{outline:2px solid var(--signal-hell);outline-offset:1px;border-color:transparent}
+.form .full{grid-column:1 / -1}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:6px}
+.form-note{margin:0;font-size:.88rem;color:#B9BEC1}
+.form-error{margin:0;color:#F2B8B5;font-size:.95rem}
+.contact .btn-primary{margin-top:0}
+.contact-meta a{color:var(--weiss);text-decoration-color:var(--signal-hell);text-underline-offset:4px}
+.contact :focus-visible{outline-color:var(--signal-hell)}
+@media (max-width:980px){.service-ref{grid-column:1 / -1}}
+@media (max-width:760px){.service-ref{grid-template-columns:1fr}}
+@media (max-width:620px){.form{grid-template-columns:1fr}}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr}
+  .gespann{max-width:560px}
+  .sec-head,.contact-grid,.care,.extras{grid-template-columns:1fr}
+  .service{grid-template-columns:1fr 1fr}
+  .service h3{grid-column:1 / -1}
+  .plans{grid-template-columns:1fr}
+  .plan + .plan{border-left:0;border-top:1px solid var(--linie)}
+  .plan .for,.amount-note{min-height:0}
+  .steps,.mass{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mass-line{grid-column:1 / -1}
+}
+@media (max-width:760px){
+  .nav a:not(.btn){display:none}
+  .refs{grid-template-columns:1fr}
+  .service{grid-template-columns:1fr;gap:14px}
+}
+@media (max-width:520px){
+  .steps{grid-template-columns:1fr}
+  .brand-name span{display:none}
+  .actions .btn{width:100%}
+  .mock-table .opt{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Truffer Webdesign, zum Seitenanfang">
+      <span class="brand-pole" aria-hidden="true"></span>
+      <span class="brand-name">truffer <span>webdesign</span></span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#preise">Preise</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-primary" href="#kontakt">Gratis Entwurf</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Moderne Websites für Ihr Unternehmen, Projekt oder Idee.</h1>
+        <p class="lead">Sie möchten eine Website, die Ihre Firma professionell zeigt, auf dem Handy überzeugt und bei Google gefunden wird? Truffer Webdesign gestaltet moderne, persönliche Websites: neu oder als Modernisierung Ihrer bestehenden Seite.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#kontakt">Gratis Entwurf anfragen</a>
+          <a class="btn btn-ghost" href="#preise">Preise ansehen</a>
+        </div>
+        <p class="hero-note">Kostenlos und unverbindlich: Sie erhalten zuerst einen Entwurf Ihrer neuen Website.</p>
+      </div>
+      <figure class="gespann" role="img" aria-label="Illustration: Ein Baugespann zeichnet die Umrisse eines Hauses, darin erscheint der Entwurf einer Website.">
+        <svg viewBox="0 0 560 470" aria-hidden="true">
+          <!-- Boden -->
+          <line x1="0" y1="430" x2="560" y2="430" stroke="#1F2427" stroke-width="2"/>
+          <g stroke="#9AA0A4" stroke-width="1">
+            <line x1="20" y1="440" x2="30" y2="430"/><line x1="60" y1="440" x2="70" y2="430"/><line x1="100" y1="440" x2="110" y2="430"/><line x1="140" y1="440" x2="150" y2="430"/><line x1="180" y1="440" x2="190" y2="430"/><line x1="220" y1="440" x2="230" y2="430"/><line x1="260" y1="440" x2="270" y2="430"/><line x1="300" y1="440" x2="310" y2="430"/><line x1="340" y1="440" x2="350" y2="430"/><line x1="380" y1="440" x2="390" y2="430"/><line x1="420" y1="440" x2="430" y2="430"/><line x1="460" y1="440" x2="470" y2="430"/><line x1="500" y1="440" x2="510" y2="430"/><line x1="540" y1="440" x2="550" y2="430"/>
+          </g>
+
+          <!-- Profil (Schnurlinien) -->
+          <polyline class="profil" pathLength="1" points="96,430 96,196 280,84 464,196 464,430" fill="none" stroke="#1F2427" stroke-width="2"/>
+          <line class="profil" pathLength="1" x1="96" y1="196" x2="464" y2="196" fill="none" stroke="#1F2427" stroke-width="1" stroke-dasharray="1"/>
+
+          <!-- Profilstangen mit rot-weissen Spitzen -->
+          <g class="pole p1"><rect x="93" y="166" width="6" height="264" fill="#1F2427"/><rect x="93" y="166" width="6" height="8" fill="#00663A"/><rect x="93" y="182" width="6" height="8" fill="#00663A"/></g>
+          <g class="pole p2"><rect x="187" y="128" width="5" height="302" fill="#1F2427"/><rect x="187" y="128" width="5" height="8" fill="#00663A"/><rect x="187" y="144" width="5" height="8" fill="#00663A"/></g>
+          <g class="pole p3"><rect x="277" y="54" width="6" height="376" fill="#1F2427"/><rect x="277" y="54" width="6" height="8" fill="#00663A"/><rect x="277" y="70" width="6" height="8" fill="#00663A"/></g>
+          <g class="pole p4"><rect x="368" y="128" width="5" height="302" fill="#1F2427"/><rect x="368" y="128" width="5" height="8" fill="#00663A"/><rect x="368" y="144" width="5" height="8" fill="#00663A"/></g>
+          <g class="pole p5"><rect x="461" y="166" width="6" height="264" fill="#1F2427"/><rect x="461" y="166" width="6" height="8" fill="#00663A"/><rect x="461" y="182" width="6" height="8" fill="#00663A"/></g>
+          <!-- Website-Entwurf im Haus -->
+          <g class="screen" transform="translate(280 312) scale(1.06) translate(-280 -312)">
+            <rect x="118" y="214" width="324" height="196" rx="7" fill="#FFFFFF" stroke="#1F2427" stroke-width="1.5"/>
+            <line x1="118" y1="240" x2="442" y2="240" stroke="#C8CBC7"/>
+            <circle cx="134" cy="227" r="4" fill="none" stroke="#C8CBC7" stroke-width="1.5"/>
+            <circle cx="147" cy="227" r="4" fill="none" stroke="#C8CBC7" stroke-width="1.5"/>
+            <circle cx="160" cy="227" r="4" fill="none" stroke="#C8CBC7" stroke-width="1.5"/>
+            <rect x="178" y="220" width="104" height="14" rx="7" fill="#E8E9E6"/>
+            <text x="190" y="231" font-family="Archivo, Arial, sans-serif" font-size="9" fill="#5B6369">ihre-firma.ch</text>
+            <rect x="118" y="240" width="324" height="78" fill="#1F2427"/>
+            <rect x="136" y="258" width="150" height="12" fill="#FFFFFF"/>
+            <rect x="136" y="276" width="110" height="12" fill="#FFFFFF"/>
+            <rect x="136" y="298" width="56" height="10" rx="2" fill="#00663A"/>
+            <polyline points="300,318 340,282 362,298 396,262 442,304 442,318" fill="#5B6369"/>
+            <g fill="#C8CBC7">
+              <rect x="136" y="334" width="90" height="6"/><rect x="136" y="346" width="70" height="6"/>
+              <rect x="246" y="334" width="90" height="6"/><rect x="246" y="346" width="60" height="6"/>
+              <rect x="356" y="334" width="66" height="6"/><rect x="356" y="346" width="50" height="6"/>
+            </g>
+            <g stroke="#E8E9E6"><line x1="136" y1="368" x2="424" y2="368"/><line x1="136" y1="384" x2="424" y2="384"/></g>
+            <circle cx="418" cy="376" r="3.5" fill="#00663A"/>
+            <circle cx="418" cy="392" r="3.5" fill="none" stroke="#1F2427" stroke-width="1.3"/>
+            <rect x="136" y="373" width="120" height="6" fill="#C8CBC7"/>
+            <rect x="136" y="389" width="100" height="6" fill="#C8CBC7"/>
+          </g>
+
+        </svg>
+        <figcaption><span><b>Wie ein Baugespann:</b> Bevor gebaut wird, sehen Sie, was entsteht. Deshalb erhalten Sie zuerst einen kostenlosen Entwurf.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="leistungen" aria-labelledby="leistungen-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="leistungen-title">Leistungen</h2>
+        <p class="sec-intro">Ob Handwerksbetrieb, Architekturbüro, Restaurant oder Dienstleister: Ihre Kundschaft soll in wenigen Sekunden verstehen, wer Sie sind, was Sie anbieten und wie man Sie erreicht.</p>
+      </div>
+      <ul class="services">
+        <li class="service">
+          <h3>Website modernisieren</h3>
+          <p>Ihre Website ist in die Jahre gekommen? Sie wirkt veraltet, lädt langsam oder ist auf dem Handy kaum lesbar. Sie erhalten ein neues, modernes Design, bewährte Inhalte werden übernommen und Ihre Adresse bleibt gleich. Auf Wunsch wird auch das Hosting übernommen.</p>
+          <div>
+            <ul>
+              <li>Neues, modernes Design</li>
+              <li>Optimiert für Handy und Tablet</li>
+              <li>Schnelle Ladezeiten, sicher über HTTPS</li>
+              <li>Hosting auf Wunsch inklusive</li>
+            </ul>
+            <span class="price-hint">ab CHF 1’500</span>
+          </div>
+        </li>
+        <li class="service">
+          <h3>Neue Firmen-Website</h3>
+          <p>Sie möchten online so professionell auftreten wie im direkten Kontakt? Sie erhalten eine moderne Website, die auf Ihre Firma zugeschnitten ist: persönlich, klar und gut sichtbar. So präsentiert sich Ihre Firma bei jeder Suche von ihrer besten Seite.</p>
+          <div>
+            <ul>
+              <li>Modernes, persönliches Design</li>
+              <li>Ihre Firma, Ihr Team, Ihr Angebot</li>
+              <li>Kontakt</li>
+              <li>Besser sichtbar bei Google</li>
+              <li>Google-Unternehmensprofil eingerichtet</li>
+            </ul>
+            <span class="price-hint">ab CHF 2’200</span>
+          </div>
+        </li>
+        <li class="service">
+          <h3>Projekt-Website für Wohnbau</h3>
+          <p>Sie planen ein Neubauprojekt? Eine eigene Projekt-Website zeigt auf einen Blick, welche Wohnungen noch verfügbar, reserviert oder bereits verkauft sind. Interessierte melden sich direkt über das Anfrageformular.</p>
+          <div>
+            <ul>
+              <li>Übersicht: verfügbar, reserviert, verkauft</li>
+              <li>Anfrageformular für Interessierte</li>
+              <li>Grundrisse und Baubeschrieb als PDF</li>
+              <li>Standort und Einstellplätze</li>
+              <li>Logo und Erscheinungsbild für das Projekt (Aufpreis)</li>
+            </ul>
+            <span class="price-hint">ab CHF 2’400</span>
+          </div>
+          <figure class="service-ref">
+            <div class="mock" aria-hidden="true">
+              <div class="mock-bar"><i></i><i></i><i></i></div>
+              <div class="mock-hero">
+                <strong>Modernes Wohnen in St. Niklaus</strong>
+                <svg viewBox="0 0 400 96" preserveAspectRatio="none"><polygon points="0,96 0,70 60,40 110,62 170,8 215,48 260,30 320,60 400,36 400,96" fill="#5B6369"/><polygon points="0,96 0,84 90,66 180,80 260,64 400,78 400,96" fill="#3A4146"/></svg>
+              </div>
+              <table class="mock-table">
+                <thead><tr><th>Wohnung</th><th class="opt">Haus</th><th>Fläche</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>4½ Zimmer</td><td class="opt">Süd</td><td>124 m²</td><td><span class="st">verfügbar</span></td></tr>
+                  <tr><td>3½ Zimmer</td><td class="opt">Nord</td><td>96 m²</td><td><span class="st res">verkauft</span></td></tr>
+                  <tr><td>2½ Zimmer</td><td class="opt">Nord</td><td>68 m²</td><td><span class="st">verfügbar</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>
+              <span class="ref-label">Referenz</span>
+              <h4>Modernes Wohnen in St. Niklaus</h4>
+              <p>Neubau mit 16 Eigentumswohnungen in zwei Häusern. Wohnungsübersicht mit Status, Einstellhalle, Standort und Anfrageformular.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="ablauf" aria-labelledby="ablauf-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="ablauf-title">So läuft es ab</h2>
+        <p class="sec-intro">Ihre Website soll zu Ihnen passen, nicht zu einer Vorlage. Sie haben dafür von Anfang bis Ende eine feste Ansprechperson.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <h3>Vorstellungen schicken</h3>
+          <p>Sie schicken Ihre Ideen per E-Mail oder über das Formular: was Ihre Firma ausmacht, was Ihnen gefällt, was Sie brauchen.</p>
+        </li>
+        <li class="step">
+          <h3>Gratis Entwurf</h3>
+          <p>Sie erhalten einen kostenlosen Entwurf Ihrer neuen Website. Unverbindlich.</p>
+        </li>
+        <li class="step">
+          <h3>Gemeinsam optimieren</h3>
+          <p>Wir schauen den Entwurf zusammen an und passen ihn in einem Gespräch an Ihre Bedürfnisse an.</p>
+        </li>
+        <li class="step">
+          <h3>Online</h3>
+          <p>Sobald die Website Ihren Vorstellungen entspricht, geht sie online, inklusive Domain, HTTPS und Google-Eintrag.</p>
+        </li>
+      </ol>
+      <div class="mass" aria-hidden="true"><div class="mass-line"><span>meist 2 bis 4 Wochen</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="preise" aria-labelledby="preise-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="preise-title">Preise</h2>
+        <p class="sec-intro">Richtpreise für den Einstieg. Nach dem Gespräch über Ihren Entwurf erhalten Sie ein verbindliches Angebot zum Festpreis, ohne versteckte Kosten.</p>
+      </div>
+
+      <div class="sheet">
+        <div class="plans">
+          <article class="plan">
+            <h3>Modernisierung</h3>
+            <p class="for">Für bestehende Websites, die in die Jahre gekommen sind.</p>
+            <div class="amount"><small>ab CHF</small><b>1’500</b></div>
+            <p class="amount-note">bis 5 Seiten</p>
+            <ul>
+              <li>Neues, modernes Design</li>
+              <li>Inhalte übernommen und überarbeitet</li>
+              <li>Optimiert für Handy und Tablet</li>
+              <li>Schnelle Ladezeiten und HTTPS</li>
+              <li>Google-Grundlagen: Titel, Beschreibungen, Struktur</li>
+              <li>Umzug ohne Unterbruch, gleiche Adresse</li>
+            </ul>
+            <a class="btn btn-ghost" href="#kontakt">Modernisierung anfragen</a>
+          </article>
+          <article class="plan">
+            <h3>Neue Firmen-Website</h3>
+            <p class="for">Für Firmen ohne eigene Website oder mit einer Baukasten-Seite.</p>
+            <div class="amount"><small>ab CHF</small><b>2’200</b></div>
+            <p class="amount-note">One-Pager, mehrseitig ab CHF 3’500</p>
+            <ul>
+              <li>Modernes, persönliches Design</li>
+              <li>Aufbau und Texte gemeinsam erarbeitet</li>
+              <li>Ihre Firma, Ihr Team, Ihr Angebot, Kontakt</li>
+              <li>Google-Unternehmensprofil eingerichtet</li>
+              <li>Domain und E-Mail-Adressen eingerichtet</li>
+              <li>Impressum und Datenschutzerklärung</li>
+            </ul>
+            <a class="btn btn-ghost" href="#kontakt">Neue Website anfragen</a>
+          </article>
+          <article class="plan focus">
+            <h3>Projekt-Website Wohnbau</h3>
+            <p class="for">Für Neubauprojekte, Überbauungen und Stockwerkeigentum.</p>
+            <div class="amount"><small>ab CHF</small><b>2’400</b></div>
+            <p class="amount-note">inkl. Wohnungsübersicht und Anfrageformular</p>
+            <ul>
+              <li>Übersicht: verfügbar, reserviert, verkauft</li>
+              <li>Anfrageformular für Interessierte</li>
+              <li>Grundrisse und Baubeschrieb als PDF</li>
+              <li>Standort mit Karte und Umgebung</li>
+              <li>Einstellplätze und Garagenboxen</li>
+              <li>Logo und Erscheinungsbild auf Wunsch (Aufpreis)</li>
+            </ul>
+            <a class="btn btn-primary" href="#kontakt">Projekt-Website anfragen</a>
+          </article>
+        </div>
+        <div class="care">
+          <div>
+            <h3>Hosting und Betreuung</h3>
+            <div class="amount"><small>CHF</small><b>450</b><small>pro Jahr</small></div>
+          </div>
+          <div>
+            <p>Fixpreis für eine normale Website: Hosting, HTTPS-Zertifikat, Domain-Verwaltung, Sicherheits-Checks und kleine Änderungen per E-Mail.</p>
+            <p>Für zusätzliche Wünsche, zum Beispiel regelmässige Aktualisierungen einer Wohnungsübersicht, finden wir auf Anfrage eine passende Lösung. Kündbar auf Ende Jahr.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sec" id="fragen" aria-labelledby="fragen-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="fragen-title">Häufige Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary>Können Sie meine bestehende Website übernehmen?</summary>
+            <p>Ja. Ihre Website wird modern neu aufgebaut, Texte und Bilder werden übernommen. Ihre Domain bleibt auf Ihren Namen, nur die Einstellung, wohin sie zeigt, wird angepasst. Ihre E-Mail-Adressen funktionieren dabei unverändert weiter.</p>
+          </details>
+          <details>
+            <summary>Mit welcher Technik wird die Website gebaut?</summary>
+            <p>Jede Website wird individuell programmiert, ohne Baukasten. Sie lädt schnell, ist sicher und kostet Sie kein Baukasten-Abo.</p>
+          </details>
+          <details>
+            <summary>Welche laufenden Kosten kommen dazu?</summary>
+            <p>Damit Ihre Website online ist, braucht sie ein Hosting. Hosting und Betreuung kosten CHF 450 pro Jahr, inklusive kleiner Änderungen. Dazu kommt die Domain für rund CHF 15 pro Jahr. Haben Sie bereits einen eigenen Hosting-Anbieter, erhalten Sie die fertigen Dateien; spätere Änderungen werden dann nach Aufwand verrechnet.</p>
+          </details>
+          <details>
+            <summary>Kann ich später etwas ändern lassen?</summary>
+            <p>Ja. Schicken Sie einfach eine E-Mail. Kleine Änderungen wie neue Fotos, Texte oder der Status einer Wohnung sind im Hosting-Paket enthalten, grössere Anpassungen werden Ihnen vorab offeriert.</p>
+          </details>
+          <details>
+            <summary>Wie lange dauert es, bis die Website online ist?</summary>
+            <p>Meist zwei bis vier Wochen, je nachdem, wie schnell Texte und Fotos bereit sind.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="kontakt" aria-labelledby="kontakt-title">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="kontakt-title">Gratis Entwurf anfragen</h2>
+      </div>
+      <div>
+        <p class="sec-intro">Erzählen Sie kurz, wer Sie sind und was Sie sich vorstellen. Sie erhalten einen kostenlosen Entwurf Ihrer neuen Website, unverbindlich.</p>
+        <form class="form" id="anfrage" novalidate>
+          <label>Name<input name="name" autocomplete="name" required></label>
+          <label>Firma<input name="firma" autocomplete="organization"></label>
+          <label>E-Mail<input name="email" type="email" autocomplete="email" required></label>
+          <label>Bestehende Website (falls vorhanden)<input name="website" type="url" placeholder="www.ihre-firma.ch"></label>
+          <label class="full">Ihre Vorstellungen<textarea name="text" rows="5" required placeholder="Was macht Ihre Firma aus? Was soll die Website können?"></textarea></label>
+          <p class="form-error full" id="form-error" role="alert" hidden>Bitte Name, E-Mail und Ihre Vorstellungen ausfüllen.</p>
+          <div class="full form-foot">
+            <button class="btn btn-primary" type="submit">Anfrage per E-Mail senden</button>
+            <p class="form-note">Der Button öffnet Ihr E-Mail-Programm mit der vorbereiteten Nachricht.</p>
+          </div>
+        </form>
+        <div class="contact-meta">
+          <div><span>Lieber direkt?</span><a href="mailto:info@truffer-webdesign.ch?subject=Gratis%20Entwurf">info@truffer-webdesign.ch</a></div>
+          <div><span>Region</span>Wallis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><div class="foot-inner">
+    <p>© 2026 Truffer Webdesign</p>
+    <div class="legal">
+      <details>
+        <summary>Impressum</summary>
+        <p>Truffer Webdesign<br>Silvan Truffer<br>Eya 70<br>3924 St. Niklaus<br>info@truffer-webdesign.ch</p>
+      </details>
+      <details>
+        <summary>Datenschutz</summary>
+        <p>Diese Website setzt keine Tracking-Cookies. Wenn Sie eine E-Mail oder Anfrage senden, werden Ihre Angaben nur verwendet, um Ihre Anfrage zu beantworten. Schriften werden über Google Fonts geladen; dabei wird Ihre IP-Adresse an Google übermittelt. Verantwortlich: Silvan Truffer, Adresse siehe Impressum.</p>
+      </details>
+    </div>
+  </div></div>
+</footer>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  function onScroll(){ if(top){ top.classList.toggle('scrolled', window.scrollY>8); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var f=document.getElementById('anfrage');
+  if(f){f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(n){return (f.elements[n].value||'').trim();};
+    var err=document.getElementById('form-error');
+    if(!v('name')||!v('email')||!v('text')){err.hidden=false;return;}
+    err.hidden=true;
+    var body='Name: '+v('name')+'\nFirma: '+v('firma')+'\nE-Mail: '+v('email')+'\nBestehende Website: '+v('website')+'\n\nMeine Vorstellungen:\n'+v('text');
+    window.location.href='mailto:info@truffer-webdesign.ch?subject='+encodeURIComponent('Gratis Entwurf – '+(v('firma')||v('name')))+'&body='+encodeURIComponent(body);
+  });}
+})();
+</script>
+</body>
+</html>
